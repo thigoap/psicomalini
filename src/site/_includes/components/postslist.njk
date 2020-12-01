@@ -1,0 +1,27 @@
+<ul class="flex flex-col items-center space-y-4">
+{%- for post in postslist -%}
+<div class="w-full mx-auto
+  sm:w-4/5
+  md:w-2/3">
+  <a class="sm:flex sm:items-center" href="{{ post.fields.url | url }}">
+    <li class="flex flex-col w-full list-none p-1 shadow bg-white hover:shadow-lg
+    sm:flex-row">
+      <div class="flex justify-center">
+        <div class="w-32">
+          {% if post.fields.imagem.fields.file.url %}
+          <img class="w-32 object-cover border border-black" src="{{ post.fields.imagem.fields.file.url }}" alt="imagem">
+          {% endif %}
+        </div>
+      </div>
+      <div class="flex flex-col items-center px-2 
+        sm:items-start sm:ml-4 sm:px-0">
+        <p class="text-xl font-semibold text-center sm:text-left">{{ post.fields.titulo }}</p>
+        <p class="text-gray-600 text-sm
+          sm:mb-4">Publicado por {{ post.fields.autor }} em {{ post.fields.data | dateReadable }}</p>
+      </div>
+      <!-- <p class="mb-4 text-center sm:text-left">{{ post.data.description }}</p> -->
+    </li>
+  </a>
+</div>
+{%- endfor -%}
+</ul>

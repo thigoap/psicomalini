@@ -1,0 +1,55 @@
+---
+layout: base
+permalink: /contato/
+---
+
+<div class="m-4">
+  <div class="my-2">
+    <p>Minhas redes sociais</p>
+  </div>
+    <div class="flex my-1">
+      <a class="flex items-center" target="_blank" href="https://www.instagram.com/psico.malini/">
+        <i class="text-3xl mr-2 hover:text-instaicon fab fa-instagram"></i>
+        @psico.malini</a>
+    </div>
+    <div class="flex my-1">
+      <a class="flex items-center" target="_blank" href="https://www.facebook.com/psico.malini/">
+        <i class="text-3xl mr-2 hover:text-faceicon fab fa-facebook-f"></i>
+        @psico.malini</a>
+    </div>
+    <br>
+  <div class="my-2">
+    <p>Você também pode entrar em contato por whatsapp, email ou pelo formulário abaixo.</p>
+  </div>
+  <div class="flex">
+    <a class="flex items-center" target="_blank" rel="noopener noreferrer" href="https://wa.me/5514996557095">
+      <i class="text-3xl mr-2 hover:text-whatsicon fab fa-whatsapp"></i>
+      (14) 99655-7095</a>
+  </div>
+  <div class="flex">
+    <a class="flex items-center" href="mailto:nataliamalini.psico@gmail.com">
+      <i class="text-3xl mr-2 hover:text-red-600 far fa-envelope"></i>
+      nataliamalini.psico@gmail.com</a>
+  </div>
+
+  <div class="w-full my-2 sm:w-4/5 md:w-3/5">
+    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <div class="my-1">
+        <input class="w-full shadow appearance-none border rounded py-1 px-2 text-gray-700 leading-tight" type="text" name="nome" placeholder="Nome*" required="required">
+      </div>
+      <div class="my-1">
+        <input class="w-full shadow appearance-none border rounded py-1 px-2 text-gray-700 leading-tight" type="email" name="email" placeholder="Email*" required="required">
+      </div>
+      <div class="my-1">   
+        <input class="w-full shadow appearance-none border rounded py-1 px-2 text-gray-700 leading-tight" type="text" name="assunto" placeholder="Assunto*" required="required">
+      </div>
+      <div class="my-1">  
+        <textarea class="w-full shadow appearance-none border rounded py-1 px-2 text-gray-700 leading-tight" name="mensagem" placeholder="Mensagem*" rows="5" required="required"></textarea>
+      </div>
+      <button class="text-sm bg-primarytext hover:bg-red-500 duration-200 text-white font-semibold p-4 rounded" type="submit">Enviar mensagem</button> 
+    </form>
+  </div>
+</div>

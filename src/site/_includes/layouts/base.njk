@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/40fd1bd135.js" crossorigin="anonymous"></script>
+  <meta name="author" content="{{ metadata.title }}">
+  <meta name="description" content="{{ metadata.description }}">
+  <link rel="stylesheet" href="{{ '/static/css/styles.css' | url }}">
+  <link rel="icon" href={{ metadata.logo }}>
+  <title>Psico Malini</title>
+</head>
+<body>
+
+  <div class="container w-11/12 max-w-5xl mx-auto my-12">
+    {% include '../components/header.njk' %}
+
+      <main class="flex flex-col flex-1 bg-mainbg text-gray-900
+      lg:mx-auto">
+        {{ content | safe }}
+      </main>
+
+    {% include '../components/footer.njk' %}
+  </div>
+</body>
+</html>

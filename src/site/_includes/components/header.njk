@@ -1,0 +1,51 @@
+<header class="font-header py-4 flex flex-col bg-primarybg text-primarytext relative rounded-t-lg" id="header">
+  <div class="grid grid-cols-4">  
+    
+    <div class="ml-4">
+      <p class="text-2xl flex items-center font-prata"><a class="whitespace-pre" aria-label="link to Index" href="/">{{ metadata.title }}</a></p>
+    </div>
+
+    <div class="col-span-3 flex flex-col items-end">
+      {% if nav.links %}
+        <div class="sm:hidden mr-4">
+          <button id="burger" aria-label="menu burger button">
+            <svg class="fill-current text-primarytext" viewBox="0 0 100 80" width="32" height="32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="100" height="16" rx="8" />
+              <rect y="30" width="100" height="16" rx="8" />
+              <rect y="60" width="100" height="16" rx="8" />
+            </svg>
+          </button>
+        </div>
+
+        <nav id="navItems" class="text-sm bg-primarybg flex flex-col w-full absolute right-0 pr-4 py-1 mt-12 transition duration-500 opacity-0 pointer-events-none
+          sm:flex-row sm:flex sm:w-auto sm:items-center sm:space-x-4 sm:mt-0 sm:relative sm:opacity-100 sm:pointer-events-auto">
+          {% for link in nav.links %}
+            {% set relAttribute = '' %}
+            {% set currAttribute = '' %}
+
+            {% if link.external %}
+              {% set relAttribute = ' rel="external" target="_blank"' %}
+            {% endif %}
+            {% if page.url == link.url %}
+              {% set currAttribute = ' aria-current="page"' %}
+            {% endif %}
+
+            <p class="flex justify-end"><a href="{{ link.url }}" {{ relAttribute | safe }}{{ currAttribute | safe }}>
+              {{ link.label }}
+            </a></p>
+          {% endfor %}
+        </nav>
+
+      {% endif %}
+    </div>
+
+  </div>
+</header>
+
+<script>
+  burger.addEventListener('click', () => {
+      navItems.classList.toggle('opacity-100')
+      navItems.classList.toggle('pointer-events-auto')
+    }
+  )
+</script>

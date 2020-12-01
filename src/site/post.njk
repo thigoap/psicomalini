@@ -1,0 +1,19 @@
+---
+layout: blogpost
+pagination:
+  data: blog
+  size: 1
+  alias: post
+permalink: '/blog/{{ post.fields.url | slug }}/'
+---
+
+<div>
+  <p class="my-2 text-3xl font-bold font-prata"> {{ post.fields.titulo }} </p>
+  <p class="text-sm text-gray-700 text-right">Publicado por {{ post.fields.autor }}
+  em <time datetime="{{ post.fields.data | dateIso }}">{{ post.fields.data | dateReadable }}</time>
+</div>
+<hr><br>
+{% if post.fields.imagem.fields.file.url %}
+  <img class="h-64" src="{{ post.fields.imagem.fields.file.url }}"><br>
+{% endif %}  
+{% richText post.fields.texto %}

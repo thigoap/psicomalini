@@ -1,0 +1,21 @@
+{
+  "title": "Psico Malini",
+  "url": "https://psicomalini.netlify.app",
+  "description": "Site da Psico Malini.",
+  "logo": "/static/assets/logos/psi.png",
+  "feed": {
+    "subtitle": "Site da Psico Malini.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://psicomalini.netlify.app"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://psicomalini.netlify.app/feed/feed.json"
+  },
+  "author": {
+    "name": "Thiago Abrahão Pereira",
+    "email": "appthigo@gmail.com",
+    "url": "https://thigoap.me"
+  }
+}

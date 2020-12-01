@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "label": "Blog",
+      "url": "/blog/",
+      "external": false
+    },
+    {
+      "label": "Sobre mim",
+      "url": "/sobre/",
+      "external": false
+    },
+    {
+      "label": "Contato",
+      "url": "/contato/",
+      "external": false
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+.markdown {
+  @apply leading-relaxed;
+  @apply text-sm;
+}
+@screen sm {
+  .markdown {
+    @apply text-base;
+  }
+}
+@screen lg {
+  .markdown {
+    @apply text-lg;
+  }
+}
+/* Headers */
+.markdown h1,
+.markdown h2 {
+  @apply text-xl;
+  @apply my-6;
+  @apply font-semibold;
+}
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply text-lg;
+  @apply my-3;
+  @apply font-semibold;
+}
+.markdown hr {
+  @apply my-2;
+}
+@screen sm {
+  .markdown h1,
+  .markdown h2 {
+    @apply text-2xl;
+  }
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    @apply text-xl;
+  }
+}
+/* Links */
+.markdown a {
+  @apply text-blue-600;
+}
+.markdown a:hover {
+  @apply underline;
+}
+/* Paragraph */
+.markdown p {
+  @apply mb-4;
+}
+/* Lists */
+.markdown ul,
+.markdown ol {
+  @apply mb-4;
+  @apply ml-8;
+}
+.markdown li > p,
+.markdown li > ul,
+.markdown li > ol {
+  @apply mb-0;
+}
+.markdown ol {
+  @apply list-decimal;
+}
+.markdown ul {
+  @apply list-disc;
+}
+/* Blockquotes */
+.markdown blockquote {
+  @apply p-2;
+  @apply mx-6;
+  @apply mb-4;
+  @apply bg-gray-100;
+  @apply border-l-4;
+  @apply border-gray-400;
+  @apply italic;
+}
+.markdown blockquote > p {
+  @apply mb-0;
+}
+/* Tables */
+.markdown td,
+.markdown th {
+  @apply px-2;
+  @apply py-1;
+  @apply border;
+  @apply border-gray-400;
+}
+.markdown tr:nth-child(odd) {
+  @apply bg-gray-100;
+}
+.markdown table {
+  @apply mb-6;
+}
+.markdown code {
+  @apply bg-gray-100;
+  @apply p-1;
+  @apply rounded;
+}
+.markdown pre {
+  @apply bg-gray-900;
+  @apply p-1;
+  @apply rounded;
+  @apply text-gray-200;
+  @apply mb-4;
+  @apply overflow-x-auto;
+}
+.markdown pre code {
+  @apply bg-gray-900;
+}

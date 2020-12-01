@@ -1,0 +1,11 @@
+---
+layout: base
+---
+
+<div class="m-4">
+  <p class="text-sm text-right text-gray-800 hover:text-primarytext underline"><a aria-label="link to Blog" href="{{'/blog' | url }}">Voltar para o blog</a></p>
+
+  <div class="markdown">
+    {{ content | safe }}
+  </div>
+</div>
