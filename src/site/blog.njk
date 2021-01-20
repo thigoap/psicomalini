@@ -14,10 +14,10 @@ pagination:
   {% if pagination.href.previous or pagination.href.next %}
     <ul class="pt-8 flex justify-between">
       <li>{% if pagination.href.previous %}
-        <a class="hover:text-primarytext bg-primarybg p-1 rounded" href="{{ pagination.href.previous }}">Próximos posts</a>{% endif %}
+        <a class="hover:text-primarytext bg-primarybg text-primarytext p-1 rounded" href="{{ pagination.href.previous }}">Próximos posts</a>{% endif %}
       </li>
       <li>{% if pagination.href.next %}
-        <a class="hover:text-primarytext bg-primarybg p-1 rounded" href="{{ pagination.href.next }}">Posts anteriores</a>{% endif %}
+        <a class="hover:text-primarytext bg-primarybg text-primarytext p-1 rounded" href="{{ pagination.href.next }}">Posts anteriores</a>{% endif %}
         </li>
     </ul>
   {% endif %}

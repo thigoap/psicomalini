@@ -17,3 +17,4 @@ permalink: '/blog/{{ post.fields.url | slug }}/'
   <img class="h-64" src="{{ post.fields.imagem.fields.file.url }}"><br>
 {% endif %}  
 {% richText post.fields.texto %}
+{% readerBar "4px", "#a17670", "#fbe7e0" %}

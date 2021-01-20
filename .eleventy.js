@@ -1,5 +1,6 @@
 require('dotenv').config()
 const { documentToHtmlString } = require('@contentful/rich-text-html-renderer');
+const readerBar = require('eleventy-plugin-reader-bar')
 
 const moment = require('moment')
 moment.locale('pt-br')
@@ -19,6 +20,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("blogpost", "layouts/blogpost.njk")
 
   eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addPlugin(readerBar)
   
   // date handler
   eleventyConfig.addFilter('dateIso', date => {
