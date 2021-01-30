@@ -1,3 +1,3 @@
 # Psico Malini homepage
 
-Made with 11ty.
+Site profissional e blog da Psico Malini.

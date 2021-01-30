@@ -1242,6 +1242,10 @@ video {
     justify-content: flex-start;
   }
 
+  .sm\:justify-center{
+    justify-content: center;
+  }
+
   .sm\:h-full{
     height: 100%;
   }
